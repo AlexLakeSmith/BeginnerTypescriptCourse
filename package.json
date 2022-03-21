@@ -1,11 +1,23 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "First course on TS. Beginner oriented. Course content from: https://www.youtube.com/watch?v=BwuLxPH8IDs",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLakeSmith/BeginnerTypescriptCourse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexLakeSmith/BeginnerTypescriptCourse/issues"
+  },
+  "homepage": "https://github.com/AlexLakeSmith/BeginnerTypescriptCourse#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }

@@ -1,15 +1,17 @@
-// Core data types.
+// These {} are TS's notation of specialised object types.
+// It allows us to give information on the structure of an object.
+// You can do this, but you can also just let the inferencer figure it out for us.
+/*const person: {
+  name: string;
+  age: number;
+} = {
+  name: "Alex",
+  age: 20,
+};*/
 
-// By adding the : number/boolean after the param TS checks that both of the passed vars are the correct type.
-// Catching the error before it is even compiled, but the compiler will also alert you.
-function add(n1: number, n2: number, tf: boolean) {
-  if (tf) {
-    return n1 + n2;
-  }
-}
+const person = {
+  name: "Alex",
+  age: 20,
+};
 
-const num1 = 2;
-const num2 = 4;
-const printResult = true;
-
-console.log(add(num1, num2, printResult));
+console.log(person);
