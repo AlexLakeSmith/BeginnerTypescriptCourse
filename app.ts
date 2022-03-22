@@ -1,23 +1,11 @@
-// Way to represent a union type.
-function combine(
-  inp1: number | string,
-  inp2: number | string,
-  // Union types X Literal types.
-  // We allow specifically these two strings only, any other string value won't be allowed.
-  resultType: "text" | "number"
-) {
-  // Makes clear that we will either always work with numbers or always work with strings. Runtime check.
-  let result;
-  if (
-    (typeof inp1 === "number" && typeof inp2 === "number") ||
-    resultType === "number"
-  ) {
-    result = +inp1 + +inp2;
-  } else {
-    result = inp1.toString() + " " + inp2.toString();
-  }
-  return result;
+// A possible way to declare the expected return type can be seen after the parameter ()'s.
+function addNums(n1: number, n2: number): number {
+  return n1 + n2;
 }
-console.log(combine(30, 26, "number"));
-console.log(combine("30", "26", "number"));
-console.log(combine("alex", "sam", "text"));
+
+// This is a void return type because we are not returning some certain type like above ^.
+function printResults(num: number) {
+  console.log("Result " + num);
+}
+
+printResults(addNums(1, 1));
